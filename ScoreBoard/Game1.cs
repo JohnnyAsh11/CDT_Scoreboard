@@ -26,7 +26,7 @@ namespace Scoreboard
         private KeyboardState prevKBState;
 
         // Server connection fields.
-        //private ScoreboardServer m_pServer;
+        private ScoreboardServer m_pServer;
         private const float SERVER_UPDATE_TIME = 0.25f;
         private float m_fTotalTimer = 0;
 
@@ -51,7 +51,7 @@ namespace Scoreboard
         /// </summary>
         protected override void Initialize()
         {
-            //m_pServer = new ScoreboardServer("http://localhost:5000/");
+            m_pServer = new ScoreboardServer("http://localhost:5000/");
 
             base.Initialize();
         }
@@ -87,7 +87,7 @@ namespace Scoreboard
         /// Called every frame, updates logic within the scoreboard.
         /// </summary>
         /// <param name="a_pGameTime">Fundamentally, tracks the change in time between frames.</param>
-        protected override /*async*/ void Update(GameTime a_pGameTime)
+        protected override async void Update(GameTime a_pGameTime)
         {
             // Creating a delta time variable with GameTime
             float fDeltaTime = (float)a_pGameTime.ElapsedGameTime.TotalSeconds;
@@ -118,7 +118,7 @@ namespace Scoreboard
             if (m_fTotalTimer >= SERVER_UPDATE_TIME)
             {
                 // Getting new data from the server.
-                //await m_pServer.Get();
+                await m_pServer.Get();
 
                 // Resetting the timer.
                 m_fTotalTimer = 0.0f;
