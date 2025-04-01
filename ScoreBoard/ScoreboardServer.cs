@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
 using System.Net.Http;
@@ -71,15 +72,20 @@ namespace Scoreboard
     /// </summary>
     public class ScoreDTO
     {
-        public int Box1Health { get; set; }
-        public int Box2Health { get; set; }
-        public int Box3Health { get; set; }
-        public int Box4Health { get; set; }
-        public int Box5Health { get; set; }
-        public int Box6Health { get; set; }
-        public int Box7Health { get; set; }
-        public int Box8Health { get; set; }
-        public int Box9Health { get; set; }
-        public int Box10Health { get; set; }
+        public List<BoxDTO> Boxes { get; set; }
+    }
+
+    /// <summary>
+    /// Contains the data that the individual boxes will actually have.
+    /// </summary>
+    public class BoxDTO
+    {
+        public int Box { get; set; }
+        public string Building { get; set; }
+        public float Health { get; set; }
+        public string IP { get; set; }
+        public string OS { get; set; }
+        public string Service { get; set; }
+        public string State { get; set; }
     }
 }

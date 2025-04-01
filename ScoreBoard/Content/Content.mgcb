@@ -13,7 +13,7 @@
 
 #---------------------------------- Content ---------------------------------#
 
-#begin ../../../../Pictures/Camera Roll/Minecraft_Background.jpg
+#begin Minecraft_Background.jpg
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -23,7 +23,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:../../../../Pictures/Camera Roll/Minecraft_Background.jpg;Minecraft_Background.jpg
+/build:Minecraft_Background.jpg
 
 #begin Minecraft_Half_Heart.webp
 /importer:TextureImporter
